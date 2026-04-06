@@ -98,6 +98,16 @@ public:
         return total;
 
     }
+    double getTotalCos() {
+        double total =0;
+        Ingredient * ptr = head;
+        while (ptr!=nullptr) {
+            total += ptr->getCost();
+            ptr += ptr->getNext();
+
+        }
+        return total;
+    }
 
 
 };
