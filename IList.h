@@ -88,6 +88,17 @@ public:
             ptr = ptr->getNext(); // set pointer to node get next
         }
     }
+    double getTotalCal() {
+        double total=0;
+        Ingredient *ptr = head;
+        while (ptr!= nullptr) {
+            total += ptr->getCalories();
+            ptr = ptr->getNext();
+        }
+        return total;
+
+    }
+
 
 };
 
