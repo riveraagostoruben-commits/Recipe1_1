@@ -71,23 +71,24 @@ public:
             }
         }
         else {
-            head = tail = nullptr; // if
+            head = tail = nullptr; // if list is empty set head and tail to nullptr(nullpointer)
         }
         delete ptr;
     }
     bool isEmpty() {
-        bool res = false;
-        if (head== nullptr) {
+        bool res = false; //creating a boolean variable and set it to false
+        if (head== nullptr) { // if there is no head node the list is empty so return true
             res =true;
         }
     }
     void printList() {
-        Ingredient * ptr = head;
-        while (ptr!=nullptr) {
-            cout<< "Ingredient: " << ptr->getName() << "Calories: "<< ptr->getCalories()<<"Cost: "<< ptr->getCost();
-            ptr = ptr->getNext();
+        Ingredient * ptr = head; // create a pointer and set it to head
+        while (ptr!=nullptr) { //  while pointer is has a node
+            cout<< "Ingredient: " << ptr->getName() << "Calories: "<< ptr->getCalories()<<"Cost: "<< ptr->getCost();  //print its details
+            ptr = ptr->getNext(); // set pointer to node get next
         }
     }
+
 };
 
 #endif //RECIPE1_1_ILIST_H
